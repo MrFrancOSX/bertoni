@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="Content-Type" content="text/html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <meta name="msapplication-TileColor" content="#303F9F">
+    <meta name="theme-color" content="#303F9F">
+
+
+
+    <title>Examen Frontend Bertoni Solutions - Franco Romani</title>
+    <meta name="keywords" content="Franco, Antonio, Romani, Cayo, examen, frontend, Bertoni, Solutions, mini, proyecto, habilidades, tecnicas">
+    <meta name="description" content="Este es el examen Frontend desarrollado por Franco A. Romaní Cayo">
+	<link rel="canonical" href="http://bertonisolutions.com/examen-franco-romani">
+
+	<meta property="og:locale" content="es_ES">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Examen Frontend Bertoni Solutions - Franco Romani">
+	<meta property="og:description" content="Este es el examen Frontend desarrollado por Franco A. Romaní Cayo">
+	<meta property="og:url" content="http://bertonisolutions.com/">
+	<meta property="og:site_name" content="http://bertonisolutions.com/">
+	<!-- <meta property="fb:admins" content="xxxxxxxxxx"> -->
+	<meta property="og:image" content="images/favicon/android-chrome-192x192.png">
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:description" content="Este es el examen Frontend desarrollado por Franco A. Romaní Cayo">
+	<meta name="twitter:title" content="Examen Frontend Bertoni Solutions - Franco Romani">
+	<meta name="twitter:site" content="@francoromani">
+	<meta name="twitter:image" content="images/favicon/android-chrome-192x192.png">
+	<meta name="twitter:creator" content="@francoromani">
+
+
+    <!-- Librerias CSS-->
+    
+    <link rel="stylesheet" href="bower_components/jquery-ui/themes/base/jquery-ui.min.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/navbar-fix.css">
+    <link rel="stylesheet" href="css/main.css">
+    
+	
+
+
+
+</head>
+
+
+
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <span class="title-brand">Examen Frontend</span>    
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                
+                
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="http://francoromani.com" target='_blank'>@francoromani</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+<div ng-app>
+    <div ng-controller="MainCtrl">
+    <section class="buscador">
+
+        <div class="container">
+
+                    
+
+            <div class="row">
+                <form action="#" name="buscar-categoria">                
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Escribir cualquier filtro: Color, categoria, id ,etc"  ng-model="search.$">
+                    </div>
+                    <div class="col-md-2">
+                        <input type="submit" class="btn btn-primary btn-block" value="Buscar" id="buscar">
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-primary btn-lg" ng-click="remove($index)" data-toggle="modal" data-target="#crearModal">
+                            Crear
+                        </button>
+                        
+                        <!-- Modal crear -->
+                        <div class="modal fade" id="crearModal" tabindex="-1" role="dialog" aria-labelledby="crearModalLabel">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <h4 class="modal-title" id="crearModalLabel">Crear una tarjeta</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                        
+                                            <div class="form-group">
+                                                <label for="id_pet">Id Pet</label>
+                                                <input ng-model="pet.id" type="number" class="form-control" id="id_pet" placeholder="123456789">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="id_cat">Id Categoría:</label>
+                                                <input ng-model="pet.categoriaId" type="number" class="form-control" id="id_cat" placeholder="120">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="categoria_pet">Categoría:</label>
+                                                <input ng-model="pet.categoria" type="text" class="form-control" id="categoria_pet" placeholder="perro">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="nombre_pet">Nombre:</label>
+                                                <input ng-model="pet.name" type="text" class="form-control" id="nombre_pet" placeholder="Firulais">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="fotoUrl_pet">Foto URL:</label>
+                                                <input ng-model="pet.url" type="text" class="form-control" id="fotoUrl_pet" placeholder="https://pbs.twimg.com/profile_images/855817616341979136/KDuvNAR0_400x400.jpg">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="tag_pet">Tag:</label>
+                                                <input ng-model="pet.tag" type="text" class="form-control" id="tag_pet" placeholder="bonito">
+                                            </div>
+                                        
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                        <input type="submit" class="btn btn-primary" ng-submit="add()" value='crear'>
+                                    </div>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>         
+                </form>
+            </div>
+
+            
+
+
+            
+            
+        </div>
+        
+    </section>
+
+
+    <section class="listado">
+
+        <div class="container">             
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Lista de resultados:</h1>
+                </div>
+            </div>  
+        
+
+
+            
+
+                <div class="padreArticle" ng-repeat="pet in pets | filter:search">
+                    
+                <article>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div>
+                                Categoria: 
+                                <span id='nombre_cat'>{{pet.categoria}}</span>
+                            </div>
+                            <div>
+                                ID Categoria: 
+                                <span id='id_cat'>{{pet.categoriaId}}</span>
+                            </div>
+                            <img class="img-responsive" src="{{pet.url}}">
+                            <div>
+                                Nombre:
+                                <span id="nombre_pet">{{pet.name}}</span>
+                            </div>
+                            <div>
+                                ID Mascota:
+                                <span id="id_pet">{{pet.id}}</span>
+                            </div>
+                            <div>
+                                Tag:
+                                <span id="tag_pet">{{pet.tag}}</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modificar">
+                                Modificar
+                            </button>
+
+                            <!-- Modal modificar-->
+                            <div class="modal fade" id="modificar" tabindex="-1" role="dialog" aria-labelledby="modificarLabel">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            <h4 class="modal-title" id="modificarLabel">Modificar</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="form-group">
+                                                <label for="id_pet">Id Mascota</label>
+                                                <input type="number" class="form-control" id="id_pet" placeholder="123456789">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="categoria_pet">Categoría:</label>
+                                                <input type="text" class="form-control" id="categoria_pet" placeholder="perro">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="nombre_pet">Nombre:</label>
+                                                <input type="text" class="form-control" id="nombre_pet" placeholder="Firulais">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="fotoUrl_pet">Foto URL:</label>
+                                                <input type="text" class="form-control" id="fotoUrl_pet" placeholder="https://pbs.twimg.com/profile_images/855817616341979136/KDuvNAR0_400x400.jpg">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="tag_pet">Tag:</label>
+                                                <input type="text" class="form-control" id="tag_pet" placeholder="bonito">
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button  class="btn btn-primary btn-lg" ng-click="remove($index)">
+                                Eliminar
+                            </button>
+
+                            
+
+                            
+
+                            
+
+
+                        </div>
+                    </div>
+                </article>
+                </div>
+
+
+                
+
+
+
+
+
+
+    </section>
+
+</div>
+</div>
+
+
+
+    <script src="bower_components/jquery/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+
+    <script src="js/myAngular.js">
+    
+    
+
+        
+    </script>
+
+</body>
+</html>

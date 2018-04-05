@@ -1,0 +1,491 @@
+//Created by Franco Romani
+
+//general colors
+$white: #fff
+$primary-text: #212121
+$secondary-text: #757575
+$primary-color: #0927cb
+$dark-primary-color: #303F9F
+$light-primary-color: #C5CAE9
+$accent-color: #FFC107
+$light-accent-color: #FFECB3
+$dark-accent-color: #FFA000
+$icon-color: #fff
+$divider-color: #bdbdbd
+
+
+//body padding top
+$body-padding-top: 30px
+$body-padding-mobile: 0px
+//carousel
+@mixin carousel-mobile-full
+	height: calc(100vh - 56px)
+
+//navbar background
+$nav-background: rgba(255,255,255,1)
+$nav-border-color: transparent
+
+//navbar margins
+$space-left-nav: 20px
+$space-right-nav: 20px
+
+//navbar texts
+$nav-normal-text: #333
+$nav-bg-normal-text: transparent
+$nav-hover-text: $primary-color
+$nav-active-text: white
+
+$nav-bg-text-hv: rgba(9, 39, 255, 0.05)
+
+
+
+//navbar dropdown
+$nav-color-trigger: white
+$nav-bg-trigger: rgba(103,58,183,0.5)
+
+$nav-list-color: $white
+$nav-list-bg: $nav-bg-text-hv
+$nav-list-bg-mobile: transparent
+
+
+
+
+
+//navbar hamburguers
+$hamburguer-border-color: $dark-primary-color
+$hamburguer-rows-color: white
+$hamburguer-bg-color: $primary-color
+
+
+$hamburguer-border-color-hv: $dark-primary-color
+$hamburguer-rows-color-hv: white
+$hamburguer-bg-color-hv: $dark-primary-color
+
+//navbar-brand
+$brand-text-color: red
+$brand-bg-color: transparent
+
+$brand-text-color-hv: orange
+$brand-bg-color-hv: transparent
+
+
+
+
+
+
+//buttons - primary
+$btn-primary-bg: #fff
+$btn-primary-text: $primary-color
+$btn-primary-border: transparent
+
+$btn-primary-bg-hv: #fff
+$btn-primary-text-hv: $white
+$btn-primary-border-hv: transparent
+
+$btn-primary-bg-active: #fff
+$btn-primary-text-active: #fff
+$btn-primary-border-active: transparent
+
+//buttons - danger
+
+$btn-danger-bg: purple
+$btn-danger-text: white
+$btn-danger-border: black
+
+$bnt-danger-bg-hv: red
+$btn-danger-text-hv: white
+$btn-danger-border-hv: black
+
+$btn-danger-bg-active: red
+$btn-danger-text-active: #fff
+$btn-danger-border-active: black
+
+
+
+
+
+
+
+
+
+
+
+//sizes and padding:
+
+$box-padding-1: 60px 0px
+$box-padding-2: 40px 0px
+$box-padding-3: 25px 0px
+
+$footer-padding: 24px 0px
+
+
+
+//media querys
+$large-width: 1378px
+$macbook-small-width: 1280px
+$desktop-width: 1200px
+$media-width: 991px
+$tablet-width: 768px
+$mobile-width: 767px
+$extra-small-width: 359px
+
+//funciones
+
+@mixin standar-shadow
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1)
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+@mixin standar-shadow-hover
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+@mixin standar-shadow-static
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+
+@mixin logo-size
+	width: 70px
+	height: 22px
+
+@mixin center-background
+	background-position: center
+	background-size: cover
+
+@mixin vertical-align
+	position: relative
+	top: 50%
+	-webkit-transform: translateY(-50%)
+	-ms-transform: translateY(-50%)
+	transform: translateY(-50%)
+
+@mixin center-align
+	position: relative
+	top: 50%
+	left: 50%
+	-webkit-transform: translate(-50%,-50%)
+	-ms-transform: translate(-50%,-50%)
+	transform: translate(-50%,-50%)
+@mixin body-background
+	background: #F7F7FB
+	background: -webkit-linear-gradient(left, #F7F7FB , #F9F9FC)!important
+	background: -o-linear-gradient(right, #F7F7FB, #F9F9FC)!important
+	background: -moz-linear-gradient(right, #F7F7FB, #F9F9FC)!important
+	background: linear-gradient(to right, #F7F7FB , #F9F9FC)!important
+@mixin gradient
+	background: #3A2E74
+	background: -webkit-linear-gradient(left top, #3A2E74, #0471BD)
+	background: -o-linear-gradient(bottom right, #3A2E74, #0471BD) 
+	background: -moz-linear-gradient(bottom right, #3A2E74, #0471BD)
+	background: linear-gradient(to bottom right, #3A2E74, #0471BD)
+@mixin gradient-inverse
+	background: #3A2E74
+	background: -webkit-linear-gradient(left top, #0471BD, #3A2E74)
+	background: -o-linear-gradient(bottom right, #0471BD, #3A2E74) 
+	background: -moz-linear-gradient(bottom right, #0471BD, #3A2E74)
+	background: linear-gradient(to bottom right, #0471BD, #3A2E74)
+@mixin gradient-side
+	background: #5987A0!important
+	background: -webkit-linear-gradient(#5987A0, #7BBAD7)!important
+	background: -o-linear-gradient(#5987A0, #7BBAD7)!important
+	background: -moz-linear-gradient(#5987A0, #7BBAD7)!important
+	background: linear-gradient(#5987A0, #7BBAD7)!important
+@mixin gradient-side-hover
+	background: rgba(0,0,0,0.1)!important
+	background: -webkit-linear-gradient(left, rgba(0,0,0,0.25) , rgba(0,0,0,0.05))!important
+	background: -o-linear-gradient(right, rgba(0,0,0,0.25), rgba(0,0,0,0.05))!important
+	background: -moz-linear-gradient(right, rgba(0,0,0,0.25), rgba(0,0,0,0.05))!important
+	background: linear-gradient(to right, rgba(0,0,0,0.25) , rgba(0,0,0,0.05))!important
+@mixin gradient-side-selected
+	-webkit-border-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2DF8CF), to(#40B6F1)) 1 100%
+	-webkit-border-image: -webkit-linear-gradient(#2DF8CF, #40B6F1) 1 100%
+	-moz-border-image: -moz-linear-gradient(#2DF8CF, #40B6F1) 1 100%    
+	-o-border-image: -o-linear-gradient(#2DF8CF, #40B6F1) 1 100%
+	border-image: linear-gradient(to bottom, #2DF8CF, #40B6F1) 1 100%
+@mixin icon-gradient-white
+	background: -webkit-linear-gradient(left, rgba(255,255,255,1) , rgba(255,255,255,0.8))
+	background: -o-linear-gradient(right, rgba(255,255,255,1), rgba(255,255,255,0.8))
+	background: -moz-linear-gradient(right, rgba(255,255,255,1), rgba(255,255,255,0.8))
+	background: linear-gradient(to right, rgba(255,255,255,1) , rgba(255,255,255,0.8))
+
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
+@mixin icon-gradient-colored
+	background: -webkit-linear-gradient(#2DF8CF , #40B6F1)!important
+	background: -o-linear-gradient(#2DF8CF, #40B6F1)!important
+	background: -moz-linear-gradient(#2DF8CF, #40B6F1)!important
+	background: linear-gradient(#2DF8CF , #40B6F1)!important
+	-webkit-background-clip: text!important
+	-webkit-text-fill-color: transparent!important
+@mixin gradient-button-primary
+	background: #302664
+	background: -webkit-linear-gradient(left, #302664 , #513D87)!important
+	background: -o-linear-gradient(right, #302664, #513D87)!important
+	background: -moz-linear-gradient(right, #302664, #513D87)!important
+	background: linear-gradient(to right, #302664 , #513D87)!important
+@mixin gradient-button-danger
+	background: #CC9A06
+	background: -webkit-linear-gradient(left, #CC9A06 , #FFC107)!important
+	background: -o-linear-gradient(right, #CC9A06, #FFC107)!important
+	background: -moz-linear-gradient(right, #CC9A06, #FFC107)!important
+	background: linear-gradient(to right, #CC9A06 , #FFC107)!important
+
+@mixin cubic-transition($sec)
+	transition: all $sec cubic-bezier(.25,.8,.25,1)
+
+//scrollbar
+body::-webkit-scrollbar
+	width: 1em
+ 
+body::-webkit-scrollbar-track
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+ 
+body::-webkit-scrollbar-thumb
+	background-color: $primary-color
+	outline: 1px solid slategrey
+
+
+body
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
+	font-size: 16px
+	font-weight: 400
+	line-height: 1.5
+	color: $primary-text
+	text-align: left	
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	// padding-top: $body-padding-top
+
+		
+	// @media (max-width: $media-width+0.5px)
+	// 	padding-top: $body-padding-mobile
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6
+	font-family: inherit
+	font-weight: 500
+	line-height: 1.1
+	color: inherit
+
+nav
+	padding-right: 25px!important
+	padding-top: 6px
+	padding-bottom: 4px
+	@media (max-width: $tablet-width)
+		padding-right: 0px!important
+	@media (max-width: $mobile-width)
+		//nav-dropdown efecto
+		.navbar-nav
+			.dropdown-menu
+				position: static
+				float: none
+				width: 100%
+				margin-top: 0
+				background-color: transparent
+				border: 0
+				-webkit-box-shadow: none
+				box-shadow: none
+			&>li
+			&>a
+				line-height: 20px
+				padding: 5px 15px 5px 25px
+			.dropdown-header
+				padding: 5px 15px 5px 25px
+	&.navbar-default
+		background: $nav-background
+		border-color: $nav-border-color
+	&.navbar-nav > li >a
+		margin-top: 6px
+		padding: 8px 15px
+	&.navbar-default .navbar-collapse, .navbar-default .navbar-form
+		background: white
+		@media (max-width: $mobile-width)
+			background: $white
+		@media (max-width: $mobile-width)
+			position: relative
+			top: 4px
+
+	&.navbar-default .navbar-nav>.active>a, &.navbar-default .navbar-nav>.active>a:focus, &.navbar-default .navbar-nav>.active>a:hover
+		color: $nav-active-text
+		background-color: rgba(103,58,183,0.9)!important
+		@media (max-width: $mobile-width)
+			background-color: rgba(103,58,183,0.8)
+	&.navbar-default .navbar-nav>li>a:focus, &.navbar-default .navbar-nav>li>a:hover
+		color: $nav-hover-text
+		background-color: $nav-bg-text-hv
+		border-radius: 4px
+
+	&.navbar-default .navbar-nav > li > a
+		margin-left: $space-left-nav
+		
+		color: $nav-normal-text
+		background: $nav-bg-normal-text
+		border-radius: 0px //cambiar a 4
+		@media (max-width: $mobile-width)
+			margin-top: 2px
+			margin-right: $space-right-nav
+		//only for navbar-fix
+		&:hover
+			border-radius: 4px
+		@media (max-width: $media-width)
+			margin-right: $space-right-nav
+			padding-top: 5px
+			padding-bottom: 5px
+
+
+	&.navbar-default .navbar-nav>.open>a, &.navbar-default .navbar-nav>.open>a:focus, &.navbar-default .navbar-nav>.open>a:hover
+		color: $nav-color-trigger
+		background-color: $nav-bg-trigger
+	
+	&.navbar-default .navbar-brand
+		color: $brand-text-color
+		background: $brand-bg-color
+		&:hover
+			color: $brand-text-color-hv
+			background: $brand-bg-color-hv
+		img
+			height: 48px
+
+
+	&.navbar-default .navbar-toggle
+		border-color: $hamburguer-border-color
+		
+		&:hover, &:active, &:focus
+			border-color: $hamburguer-border-color-hv
+	&.navbar-default .navbar-toggle .icon-bar
+		background-color: $hamburguer-rows-color
+		&:hover, &:active, &:focus
+			background-color: $hamburguer-rows-color-hv
+
+	&.navbar-default .navbar-toggle
+		background-color: $hamburguer-bg-color
+	&.navbar-default .navbar-toggle:focus, &.navbar-default .navbar-toggle:hover
+		background-color: $hamburguer-bg-color-hv
+
+	&.navbar-default .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover
+		color: $nav-list-color
+		text-decoration: none
+		background-color: $nav-list-bg
+		
+
+	&.navbar-default .navbar-nav .open .dropdown-menu>li>a
+		padding: 5px 20px
+		@media (max-width: $mobile-width)
+			color: $nav-normal-text!important
+			background-color: $nav-list-bg-mobile
+			margin-bottom: 5px
+			&:focus, &:hover
+				color: $white!important
+				background-color: $nav-list-bg!important
+
+		
+	&.navbar-default .navbar-nav>li>.dropdown-menu
+
+		
+		@media (min-width: $tablet-width)
+			margin-top: 4px
+			border-radius: 4px
+			border: 1px solid rgba(0,0,0,0.05)
+		@media (max-width: $tablet-width)
+			padding-left: 20px
+			padding-right: 20px
+
+
+//general style
+
+button, a
+	outline: none!important
+	cursor: pointer
+	&.btn-primary
+		@include gradient-button-primary()
+		border: none
+		// background: $btn-primary-bg
+		color: $white
+		&.active, &.btn-primary:active, .open>.dropdown-toggle.btn-primary
+			background: $btn-primary-bg-active
+			color: $btn-primary-text-active
+		&:focus, &:hover
+			background: $btn-primary-bg-hv
+			color: $btn-primary-text-hv
+			border-color: none!important
+	&.btn-danger
+		// background: $bnt-danger-bg
+		// color: $btn-danger-text
+		color: $white
+		@include gradient-button-danger()
+		&.active, &.btn-danger:active, .open>.dropdown-toggle.btn-danger
+			background: $btn-danger-bg-active
+			color: $btn-danger-text-active
+		&:focus, &:hover
+			background: $bnt-danger-bg-hv
+			color: $btn-danger-text-hv
+
+
+textarea
+	resize: none
+
+small
+	color: $primary-text!important
+	font-size: 80%!important
+	font-weight: 400
+h1
+	font-size: 40px
+	margin-top: 24px
+	margin-bottom: 16px
+h2
+	font-size: 32px
+	margin-top: 0px
+	margin-bottom: 8px
+h3
+	font-size: 28px
+	margin-top: 0px
+	margin-bottom: 8px
+
+p
+	font-size: 16px
+	margin-top: 0
+	line-height: 24px
+	margin-bottom: 16px
+
+footer
+	padding: $footer-padding
+	p
+		margin-bottom: 0px
+
+
+//return top
+#return-to-top 
+	position: fixed
+	bottom: 20px
+	right: 20px
+	background: $accent-color
+	background: $accent-color
+	width: 50px
+	height: 50px
+	display: block
+	text-decoration: none
+	-webkit-border-radius: 35px
+	-moz-border-radius: 35px
+	border-radius: 35px
+	display: none
+	-webkit-transition: all 0.2s linear
+	-moz-transition: all 0.2s ease
+	-ms-transition: all 0.2s ease
+	-o-transition: all 0.2s ease
+	transition: all 0.2s ease
+
+#return-to-top i 
+	color: #fff!important
+	margin: 0
+	position: relative
+	left: 16px
+	top: 15px
+	font-size: 19px
+	-webkit-transition: all 0.2s ease
+	-moz-transition: all 0.2s ease
+	-ms-transition: all 0.2s ease
+	-o-transition: all 0.2s ease
+	transition: all 0.2s ease
+	z-index: 999
+
+#return-to-top:hover 
+	background: $dark-accent-color
+
+#return-to-top:hover i 
+	color: #fff!important
+	top: 9px
+

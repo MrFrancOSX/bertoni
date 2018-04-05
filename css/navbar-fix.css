@@ -1,0 +1,65 @@
+/*
+@francoromani
+*/
+
+@media (max-width: 993px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+    }
+    .navbar-collapse.collapse {
+        display: none !important;
+
+        height: auto !important;
+        padding-bottom: 0;
+        overflow-y: auto!important;
+        overflow-x: hidden!important
+    }
+    .navbar-nav {
+        float: none !important;
+        margin: 7.5px -15px;
+        margin-top: 0px!important;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+    .collapsing {
+        overflow: hidden !important;
+    }
+
+    /* Soluciona cuando hay mas de 1 opcion */
+    .navbar-collapse.in {
+        overflow-y: auto;
+    }
+
+    .navbar-fixed-bottom .navbar-collapse,
+    .navbar-fixed-top .navbar-collapse,
+    .navbar-collapse {
+        max-height: 450px;
+    }
+}
+
+@media (min-width: 993px){ 
+    .navbar-collapse.collapse {
+        display: block !important;
+        height: auto !important;
+        padding-bottom: 0;
+        overflow: visible !important;
+    }
+}
